@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function Header(props) {
-  return <div className="header">
+  return <div className="nav">
     <Link to="/">
       <div>Bookmarks App</div>
     </Link>
