@@ -1,7 +1,7 @@
 import { Form, Link, useLoaderData } from "react-router-dom"
 function Index(props) {
     const bookmark = useLoaderData()
-
+    console.log(bookmark)
     return (
         <div>
             <h2>Create a Bookmark</h2>
@@ -12,7 +12,7 @@ function Index(props) {
             </Form>           
             
             <h2>Bookmarks</h2>
-            {bookmark.map(cheese => (
+            {bookmark.map(bookmark => (
                 <div key={bookmark._id} className="bookmark">
                     <Link to={`/${bookmark._id}`}>
                         <h1>{bookmark.name}</h1>
