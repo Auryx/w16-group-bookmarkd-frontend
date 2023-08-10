@@ -67,5 +67,14 @@ $contrastcolor: rgb(191, 193, 189);
     background-color: rgb(74, 74, 246);
     color: white;
     border: none;
-    padding: .3em;
+    padding: 8px;
+}
+
+.update, .deleteBookmark {
+    color: rgb(191, 193, 189);
+}
+
+.delete {
+    border-radius: 10px;
+    padding: 5px
 }

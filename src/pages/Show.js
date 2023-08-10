@@ -7,17 +7,17 @@ function Show(props) {
 
     return (
         <div className="form">
-            <a href={bookmark.url}><h1>{bookmark.name}</h1></a>
-            <h2>Update {bookmark.name}</h2>
+            <a style={{ textDecoration: 'none', color: 'white' }}href={bookmark.url}><h1>{bookmark.name}</h1></a>
+            <h2 className="update">Update {bookmark.name}</h2>
             <Form action={`/update/${bookmark._id}`} method='post'>
-                <input type='text' name='name' placeholder="bookmark name" defaultValue={bookmark.name} />
-                <input type='text' name='url' placeholder="bookmark url" defaultValue={bookmark.url} />
-                <input type='submit' value="Update URL" />
+                <input className="input" type='text' name='name' placeholder="bookmark name" defaultValue={bookmark.name} />
+                <input className="input" type='text' name='url' placeholder="bookmark url" defaultValue={bookmark.url} />
+                <input className="create" type='submit' value="Update URL" />
             </Form>
 
-            <h2>Delete Bookmark</h2>
+            <h2 className="deleteBookmark">Delete Bookmark</h2>
             <Form action={`/delete/${bookmark._id}`} method='post'>
-                <input type='submit' value='Delete Bookmark' />
+                <input className="delete" type='submit' value='Delete Bookmark' />
             </Form>
         </div>
     )
