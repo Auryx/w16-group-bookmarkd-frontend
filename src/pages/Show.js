@@ -7,9 +7,7 @@ function Show(props) {
 
     return (
         <div className="bookmark">
-            <h1>{bookmark.name}</h1>
-            <h2>{bookmark.url}</h2>
-
+            <a href={bookmark.url}><h1>{bookmark.name}</h1></a>
             <h2>Update {bookmark.name}</h2>
             <Form action={`/update/${bookmark._id}`} method='post'>
                 <input type='text' name='name' placeholder="bookmark name" defaultValue={bookmark.name} />
