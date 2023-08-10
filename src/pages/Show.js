@@ -6,7 +6,7 @@ function Show(props) {
     // console.log(bookmark)
 
     return (
-        <div className="bookmark">
+        <div className="form">
             <a href={bookmark.url}><h1>{bookmark.name}</h1></a>
             <h2>Update {bookmark.name}</h2>
             <Form action={`/update/${bookmark._id}`} method='post'>
