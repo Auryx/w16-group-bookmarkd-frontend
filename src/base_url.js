@@ -1,1 +1,1 @@
-export const baseUrl = "https://group-bookmarkd-backend.onrender.com/"
+export const baseUrl = "https://group-bookmarkd-backend.onrender.com"
