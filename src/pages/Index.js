@@ -4,22 +4,29 @@ function Index(props) {
     console.log(bookmark)
     return (
         <div>
-            <h2>Create a Bookmark</h2>
-            <Form action="/create" method="post">
-                <input type="input" name="name" placeholder="Bookmark Name" defaultValue={bookmark.name} />
-                <input type="input" name="url" placeholder="Bookmark URL" defaultValue={bookmark.url} />
-                <input type="submit" value="create bookmark" />
-            </Form>           
+            <div className="form">
+                <h2 id="create">Create a Bookmark</h2>
+                <Form action="/create" method="post">
+                    <input className="input" type="input" name="name" placeholder="Bookmark Name" defaultValue={bookmark.name} />
+                    <input className="input" type="input" name="url" placeholder="Bookmark URL" defaultValue={bookmark.url} />
+                    <input className="create" type="submit" value="create bookmark" />
+                </Form>    
+            </div>       
             
-            <h2>Bookmarks</h2>
+            <div className="list">
+            <h2 className="bookmarks">Bookmarks</h2>
+                <div className="links">
             {bookmark.map(bookmark => (
-                <div key={bookmark._id} className="bookmark">
-                    <Link to={`/${bookmark._id}`}>
-                        <h1>{bookmark.name}</h1>
+                <div key={bookmark._id}>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${bookmark._id}`}>
+                           <h1>{bookmark.name}</h1> 
                     </Link>                    
+                </div>
+                
+            ))}
             </div>
-        ))}
-    </div>
+            </div>
+        </div>
 )}
   
 export default Index

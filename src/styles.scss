@@ -1,5 +1,5 @@
-$maincolor: black;
-$contrastcolor: red;
+$maincolor: rgb(37, 45, 118);
+$contrastcolor: rgb(191, 193, 189);
 
 @mixin red-text-black-bg {
     color: $contrastcolor;
@@ -9,6 +9,12 @@ $contrastcolor: red;
 @mixin black-text-red-bg {
     color: $maincolor;
     background-color: $contrastcolor;
+}
+
+.App {
+    background-color: rgb(191, 193, 189);
+    height: 100vh;
+    width: 100vw;
 }
 
 .nav {
@@ -21,4 +27,45 @@ $contrastcolor: red;
         margin: 10px;
         font-size: large;
     }
+}
+
+.form {
+    border: none;
+    text-align: center;
+    background-color: rgb(37, 45, 118);
+    padding: 1em 1em 2.5em 1em;
+    border-radius: 20px;
+}
+
+.bookmarks {
+    text-align: center;
+}
+
+#create {
+    color: white;
+}
+
+.form {
+    margin: 2em 2em 4em 2em;
+}
+
+.links {
+    margin: 0 2em;
+    border-radius: 20px;
+    background-color: rgb(37, 45, 118);
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.input, .create {
+   margin: 0 1em;
+   border-radius: 7px;
+}
+
+.create {
+    background-color: rgb(74, 74, 246);
+    color: white;
+    border: none;
+    padding: .3em;
 }
