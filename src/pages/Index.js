@@ -7,7 +7,7 @@ function Index(props) {
             <h2>Create a Bookmark</h2>
             <Form action="/create" method="post">
                 <input type="input" name="name" placeholder="Bookmark Name" defaultValue={bookmark.name} />
-                <input type="input" name="countryOfOrigin" placeholder="Bookmark URL" defaultValue={bookmark.url} />
+                <input type="input" name="url" placeholder="Bookmark URL" defaultValue={bookmark.url} />
                 <input type="submit" value="create bookmark" />
             </Form>           
             

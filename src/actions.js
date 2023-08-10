@@ -32,7 +32,7 @@ export const updateAction = async ({request, params}) => {
     await fetch(`${baseUrl}/bookmarks/${id}`, {
         method: "PUT",
         headers: {
-            "Content-Tupe": "application/json"
+            "Content-Type": "application/json"
         },
 
         body: JSON.stringify(updatedBookmark)
