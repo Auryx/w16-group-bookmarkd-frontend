@@ -1,0 +1,12 @@
+$maincolor: black;
+$contrastcolor: red;
+
+@mixin read-text-black-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-text-red-bg {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
