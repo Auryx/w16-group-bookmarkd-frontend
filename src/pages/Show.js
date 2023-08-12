@@ -3,11 +3,17 @@ import { useLoaderData, Form } from "react-router-dom";
 function Show(props) {
 
     const bookmark = useLoaderData();
-    // console.log(bookmark)
-
+    let newUrl = bookmark.url
+    const bookUrlTest = bookmark.url.slice(0, 5)
+    console.log(bookUrlTest !== "http:" & bookUrlTest !== "https")
+    console.log(bookUrlTest)
+    if (bookUrlTest !== "http:" & bookUrlTest !== "https"){
+        newUrl = "http://"+bookmark.url
+    }
+    console.log (newUrl)
     return (
         <div className="form">
-            <a style={{ textDecoration: 'none', color: 'white' }}href={"http://www."+bookmark.url}><h1>{bookmark.name}</h1></a>
+            <a style={{ textDecoration: 'none', color: 'white' }}href={newUrl}><h1>{bookmark.name}</h1></a>
             <h2 className="update">Update {bookmark.name}</h2>
             <Form action={`/update/${bookmark._id}`} method='post'>
                 <input className="input" type='text' name='name' placeholder="bookmark name" defaultValue={bookmark.name} />
