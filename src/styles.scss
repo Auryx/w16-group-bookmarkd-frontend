@@ -78,3 +78,7 @@ $contrastcolor: rgb(191, 193, 189);
     border-radius: 10px;
     padding: 5px
 }
+
+.create, .update, .delete {
+    cursor: pointer;
+}

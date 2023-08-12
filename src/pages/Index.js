@@ -6,19 +6,11 @@ function Index(props) {
     const bookmark = useLoaderData();
     console.log(bookmark);
 
-    const [clearForm, setClearForm] = useState("");
-    };
-
-    const handleSubmit = event => {
-        event.preventDefault();
-        setClearForm("");
-    };
-
     return (
         <div>
             <div className="form">
                 <h2 id="create">Create a Bookmark</h2>
-                <Form onSubmit={handleSubmit} action="/create" method="post">
+                <Form action="/create" method="post">
                     <input className="input" type="input" name="name" placeholder="Bookmark Name" defaultValue={bookmark.name} />
                     <input className="input" type="input" name="url" placeholder="Bookmark URL" defaultValue={bookmark.url} />
                     <input className="create" type="submit" value="create bookmark" />
