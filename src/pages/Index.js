@@ -1,7 +1,11 @@
-import { Form, Link, useLoaderData } from "react-router-dom"
+import { Form, Link, useLoaderData } from "react-router-dom";
+import { useState } from "react";
+
+
 function Index(props) {
-    const bookmark = useLoaderData()
-    console.log(bookmark)
+    const bookmark = useLoaderData();
+    console.log(bookmark);
+
     return (
         <div>
             <div className="form">
